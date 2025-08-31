@@ -17,7 +17,7 @@ cd clause_dep
 pip install -r requirements.txt
 
 python enhanced_parser_evaluation.py \
-    —inputdata.jsonl \
+    —-inputdata.jsonl \
     --output results/ \
     --openai_key “OpenAI API key”\
     --anthropic_key “Claude API key”
