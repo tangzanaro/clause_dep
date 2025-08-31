@@ -16,10 +16,6 @@ git clone https://github.com/YooSeongHee/clause_dep
 cd clause_dep
 pip install -r requirements.txt
 
-## 🚀 실행 방법
-
-### 1) 가상환경 생성 & 라이브러리 설치
-```bash
 python enhanced_parser_evaluation.py \
     —inputdata.jsonl \
     --output results/ \
