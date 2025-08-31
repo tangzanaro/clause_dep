@@ -1,0 +1,15 @@
+# OpenAI GPT (ChatGPT API)
+openai>=1.35.0
+
+# Anthropic Claude API
+anthropic>=0.25.8
+
+# Stanza (Korean GSD 같은 UD 말뭉치 분석 가능)
+stanza>=1.10.1
+
+# 환경 관리용
+python-dotenv>=1.0.1
+
+# 데이터 처리 및 분석 (필요시)
+pandas>=2.2.2
+numpy>=1.26.4
