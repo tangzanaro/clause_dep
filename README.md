@@ -12,7 +12,7 @@ Universal dependency의 ko-gsd-ud-train를 활용한 연구입니다.
 
 ## 📦 Installation
 ```bash
-git clone https://github.com/YooSeongHee/clause_dep
+git clone https://github.com/tangzanaro/clause_dep
 cd clause_dep
 pip install -r requirements.txt
 
