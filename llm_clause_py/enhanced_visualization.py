@@ -1398,8 +1398,8 @@ def create_visualized_comparison_table(all_results_df: pd.DataFrame, output_path
 def main():
     """메인 함수"""
     # 입력 파일 경로
-    enhanced_results_file = "llm_clause_experiment_py/results/detailed_results.jsonl"
-    output_dir = "llm_clause_experiment_py/results/stat_result"
+    enhanced_results_file = "clause_dep/results/detailed_results.jsonl"
+    output_dir = "clause_dep/results/stat_result"
     
     # 파일 존재 확인
     if not Path(enhanced_results_file).exists():
