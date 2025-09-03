@@ -15,7 +15,10 @@ Universal dependency의 ko-gsd-ud-train를 활용한 연구입니다.
 git clone https://github.com/tangzanaro/clause_dep
 cd clause_dep
 pip install -r requirements.txt
+```
 
+## 📦 Run
+```bash
 #Run analysis
 python enhanced_parser_evaluation.py \
     —-ko_gsd_train_final.jsonl \
