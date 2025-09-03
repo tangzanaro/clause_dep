@@ -1,5 +1,5 @@
 
-# 부사절 제시를 통한 LLMs의 문장 변환 실험
+# LLMs의 한국어 부사절 인식과 변환 능력 연구
 
 한 줄 설명: 
 Universal dependency의 ko-gsd-ud-train를 활용한 연구입니다.
