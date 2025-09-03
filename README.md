@@ -22,7 +22,7 @@ pip install -r requirements.txt
 #Run analysis
 python enhanced_parser_evaluation.py \
     —-ko_gsd_train_final.jsonl \
-    --output results/ \
+    --output dep_clause/results/ \
     --openai_key “OpenAI API key”\
     --anthropic_key “Claude API key”
 
