@@ -8,7 +8,7 @@ Universal dependency의 ko-gsd-ud-train를 활용한 연구입니다.
 ## ✨ Features
 - 절차 1: 언어모델과 stanza의 비교를 통해 언어모델의 구문분석 정확도 평가
 - 절차 2: golden_rewrite와 모델이 생성한 문장 비교
-- 절차 3: 부사절(advcl) 단서 제시 instrucution과 비제시 instrucution의 생성 성능 차이 비교
+- 절차 3: 부사절(advcl) 단서 제시 instruction과 비제시 instruction의 생성 성능 차이 비교
 
 ## 📦 Installation
 ```bash
