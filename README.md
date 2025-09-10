@@ -10,7 +10,7 @@ Universal dependency의 ko-gsd-ud-train를 활용한 연구입니다.
 - 절차 2: golden_rewrite와 모델이 생성한 문장 비교
 - 절차 3: 부사절(advcl) 단서 제시 instruction과 비제시 instruction의 생성 성능 차이 비교
 
-## 실험 데이터
+## 실험 데이터(예시)
 | ID    | 대상)           |        설명             |
 | ---------- | -------------------------|------------------------- |
 | text | 야외에 있고 <ins>작아서</ins> 추운 날씨에는 이용하기 어려울 듯.|ko-gsd-ud-train 원문|
