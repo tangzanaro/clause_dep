@@ -130,8 +130,6 @@ class LLMRewriter:
         # 모델명 매핑 - GPT-5 관련 매핑 주석 처리
         self.model_mapping = {
             # "gpt-5": "gpt-5",  # GPT-5 주석 처리
-            # "gpt-5o": "gpt-5",  # gpt-5o 주석 처리
-            # "gpt-5o-mini": "gpt-4o-mini",  # gpt-5o-mini 주석 처리
             "gpt-4o": "gpt-4o",
             "gpt-4o-mini": "gpt-4o-mini"
         }
@@ -163,7 +161,7 @@ class LLMRewriter:
             logger.info(f"Extracting advcl clauses from {len(gold_rows)} tokens")
             
             for row in gold_rows:
-                if row["deprel"] == "advcl":  # advcl만 추출, acl:relcl 제외
+                if row["deprel"] == "advcl":  # advcl만 추출
                     # 절의 범위 찾기 (더 정확한 방법)
                     clause_tokens = [row]
                     
@@ -203,7 +201,7 @@ class LLMRewriter:
             actual_model = self.model_mapping.get(model, model)
             logger.info(f"Using mapped model name: {model} -> {actual_model}")
             
-            # 모델별 다른 프롬프트와 파라미터 사용 - GPT-5 관련 코드 주석 처리
+            # 모델별 다른 프롬프트와 파라미터 사용 - GPT-5 관련 코드 주석 처리, 작동이 정상적으로 되지 않음.
             # if model.startswith("gpt-5"):
             #     # GPT-5용 프롬프트 - 더 상세하고 구조화된 지시사항
             #     if clause_info:
@@ -771,7 +769,7 @@ class EnhancedEvaluationSystem:
         if self.llm_rewriter and rewrite_instruction and gold_rewrite:
             logger.info("Starting LLM rewrite evaluation with all models")
             
-            # 절 추출 (부사절 + 관형절)
+            # 절 추출 (부사절)
             clauses = self.llm_rewriter.extract_clauses(gold_dep)
             
             # 각 모델별 결과 저장
@@ -832,7 +830,7 @@ class EnhancedEvaluationSystem:
                     })
                     logger.info(f"Full sentence rewrite F1 ({model}): {full_f1_score}")
                 
-                # advcl 정보 없이 재작성 시도 (새로운 방식)
+                # advcl 정보 없이 작성
                 logger.info(f"Attempting rewrite without advcl information with {model}")
                 rewritten_without_advcl = self.llm_rewriter.rewrite_with_llm_without_advcl(
                     text, 
@@ -988,12 +986,12 @@ class EnhancedEvaluationSystem:
                 }
                 logger.info(f"LLM {model} dependency statistics: {len(metrics_list)} samples")
         
-        # LLM 재작성 통계 - 수정된 부분
+        # LLM 재작성 통계
         llm_rewrite_stats = {}
         for result in results:
             if result.get("llm_rewrite_results"):
                 for model, model_result in result["llm_rewrite_results"].items():
-                    # best_f1_score가 0보다 큰 경우만 포함 (실제 재작성이 수행된 경우)
+                    # best_f1_score가 0보다 큰 경우만 포함
                     if model_result.get("best_f1_score", 0.0) > 0.0:
                         if model not in llm_rewrite_stats:
                             llm_rewrite_stats[model] = []
