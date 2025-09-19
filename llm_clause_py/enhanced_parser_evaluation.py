@@ -13,6 +13,7 @@ from typing import Dict, List, Any, Optional, Tuple
 import logging
 from tqdm import tqdm
 import warnings
+import propmts
 warnings.filterwarnings('ignore')
 
 # 로깅 설정
