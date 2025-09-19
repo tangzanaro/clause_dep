@@ -15,7 +15,7 @@ from typing import Dict, List, Any
 import warnings
 warnings.filterwarnings('ignore')
 
-# Font settings for English
+# 영어 폰트 세팅
 plt.rcParams['font.family'] = 'DejaVu Sans'
 plt.rcParams['axes.unicode_minus'] = False
 
