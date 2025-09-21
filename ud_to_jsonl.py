@@ -333,6 +333,6 @@ def main():
     #if jsonl_data:
     #    print("\n첫 번째 항목 샘플:")
     #    print(json.dumps(jsonl_data[0], ensure_ascii=False, indent=2))
-    # apikey: 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
+   
 if __name__ == "__main__":
     main() 
