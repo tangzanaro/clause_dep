@@ -277,7 +277,7 @@ def main():
     model = "gpt-4o-mini"
     
     if use_openai:
-        api_key = input("OpenAI API 키를 입력하세요: ").strip() #my key: "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"
+        api_key = input("OpenAI API 키를 입력하세요: ").strip() 
         if not api_key:
             print("API 키가 입력되지 않았습니다. 원본 텍스트를 사용합니다.")
             use_openai = False
