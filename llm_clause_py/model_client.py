@@ -41,7 +41,7 @@ class LocalEchoClient(BaseClient):
 class OpenAIClient(BaseClient):
     def __init__(self, model: str = "gpt-4o", api_key: str = None):
         from openai import OpenAI
-        self.client = OpenAI(api_key="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")
+        self.client = OpenAI(api_key="api-key")
         self.model = model
     def run(self, system_prompt: str, user_prompt: str, **kwargs) -> str:
         resp = self.client.chat.completions.create(
