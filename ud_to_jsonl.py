@@ -4,6 +4,7 @@
 CoNLL-U 파일을 JSONL 형식으로 변환하는 스크립트
 입력: ko_gsd-ud-train.conllu
 출력: sample_data.jsonl 형식의 JSONL 파일
+Universal Dependency 유형을 벤치마킹한 한국어 자료를 대상으로 JSON 변환
 """
 
 import json
